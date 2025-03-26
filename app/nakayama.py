@@ -204,4 +204,4 @@ def negate_verb(verb):
         return verb + 'ない'
 
 
-client.run('TOKEN')
+client.run(TOKEN)

@@ -1,4 +1,3 @@
-import os
 import discord
 import dotenv 
 import random
@@ -10,7 +9,7 @@ from server import server_thread
 
 dotenv.load_dotenv()
 
-TOKEN = os.enviton.get("TOKEN")
+TOKEN = os.environ.get("TOKEN")
 
 intents = discord.Intents.default()
 intents.members = True  # メンバー関連のIntentsを有効化

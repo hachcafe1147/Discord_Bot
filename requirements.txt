@@ -8,6 +8,8 @@ frozenlist==1.4.0
 idna==3.4
 mecab-python3==1.0.8
 multidict==6.0.4
-python-dotenv==0.21.1  # 必要ならバージョンを下げる
 unidic-lite==1.0.8
 yarl==1.9.2
+python-dotenv==1.0.1
+uvicorn==0.29.0
+fastapi==0.110.1

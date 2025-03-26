@@ -6,25 +6,15 @@ import re
 import MeCab
 import asyncio
 
+load_dotenv()  # .envファイルを読み込む
+
+TOKEN = os.getenv("TOKEN")
+
 intents = discord.Intents.default()
 intents.members = True  # メンバー関連のIntentsを有効化
 client = discord.Client(intents=intents)
 
 m = MeCab.Tagger("-Owakati")
-
-load_dotenv()  # .envファイルを読み込む
-
-TOKEN = os.getenv("DISCORD_BOT_TOKEN")
-
-if TOKEN is None:
-    raise ValueError("DISCORD_BOT_TOKEN が設定されていません")
-
-intents = discord.Intents.default()
-client = discord.Client(intents=intents)
-
-@client.event
-async def on_ready():
-    print(f'Logged in as {client.user}')
 
 @client.event
 async def on_ready():

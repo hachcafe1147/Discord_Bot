@@ -1,14 +1,15 @@
-import os
 import discord
-from dotenv import load_dotenv
+import dotenv 
 import random
 import re
 import MeCab
 import asyncio
 
-load_dotenv()  # .envファイルを読み込む
+from server import server_thread
 
-TOKEN = os.getenv("TOKEN")
+dotenv.load_dotenv()
+
+TOKEN = os.enviton.get("TOKEN")
 
 intents = discord.Intents.default()
 intents.members = True  # メンバー関連のIntentsを有効化
@@ -193,5 +194,5 @@ def negate_verb(verb):
     else:
         return verb + 'ない'
 
-
+server_thread()
 client.run(TOKEN)
